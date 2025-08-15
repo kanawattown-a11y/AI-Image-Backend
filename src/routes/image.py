@@ -5,6 +5,7 @@ from flask import Blueprint, jsonify, request
 from io import BytesIO
 
 image_bp = Blueprint('image', __name__)
+print("✅ image routes loaded")
 
 # Hugging Face API configuration
 HF_API_URL = "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4"
