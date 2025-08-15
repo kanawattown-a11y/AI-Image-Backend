@@ -7,7 +7,7 @@ from io import BytesIO
 image_bp = Blueprint('image', __name__)
 
 # Hugging Face API configuration
-HF_API_URL = "https://huggingface.co/models/CompVis/stable-diffusion-v1-4"
+HF_API_URL = "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4"
 HF_TOKEN = os.environ.get('HUGGING_FACE_TOKEN', '')
 
 @image_bp.route('/generate-image', methods=['POST'])
