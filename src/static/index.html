@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد الصور بالذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">مولد الصور بالذكاء الاصطناعي</h1>
+                <nav class="nav">
+                    <a href="#" class="nav-link active">الرئيسية</a>
+                    <a href="#" class="nav-link">معرض الصور</a>
+                    <a href="#" class="nav-link">حول المشروع</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Main Content Area -->
+                <div class="main-content">
+                    <div class="generator-section">
+                        <h2 class="section-title">إنشاء صورة جديدة</h2>
+                        <p class="section-description">
+                            اكتب وصفاً للصورة التي تريد إنشاءها وسيقوم الذكاء الاصطناعي بتوليدها لك
+                        </p>
+                        
+                        <div class="generator-form">
+                            <div class="input-group">
+                                <label for="prompt" class="input-label">وصف الصورة:</label>
+                                <textarea 
+                                    id="prompt" 
+                                    class="prompt-input" 
+                                    placeholder="مثال: منظر طبيعي جميل مع جبال وبحيرة في الغروب"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            
+                            <button id="generateBtn" class="generate-btn">
+                                <span class="btn-text">إنشاء الصورة</span>
+                                <div class="loading-spinner" style="display: none;"></div>
+                            </button>
+                        </div>
+
+                        <!-- Generated Image Display -->
+                        <div id="imageResult" class="image-result" style="display: none;">
+                            <h3 class="result-title">الصورة المولدة:</h3>
+                            <div class="image-container">
+                                <img id="generatedImage" src="" alt="الصورة المولدة" class="generated-image">
+                                <div class="image-actions">
+                                    <button id="downloadBtn" class="action-btn">تحميل الصورة</button>
+                                    <button id="shareBtn" class="action-btn secondary">مشاركة</button>
+                                </div>
+                            </div>
+                            <p id="usedPrompt" class="used-prompt"></p>
+                        </div>
+
+                        <!-- Error Display -->
+                        <div id="errorMessage" class="error-message" style="display: none;"></div>
+                    </div>
+
+                    <!-- Recent Images Section -->
+                    <div class="recent-section">
+                        <h2 class="section-title">الصور المولدة مؤخراً</h2>
+                        <div id="recentImages" class="recent-images">
+                            <!-- Recent images will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">حول المولد</h3>
+                        <p class="widget-content">
+                            مولد الصور بالذكاء الاصطناعي يستخدم أحدث تقنيات التعلم العميق لإنشاء صور فريدة وإبداعية من النصوص العربية والإنجليزية.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">نصائح للحصول على أفضل النتائج</h3>
+                        <ul class="tips-list">
+                            <li>استخدم وصفاً مفصلاً وواضحاً</li>
+                            <li>اذكر الألوان والأسلوب المطلوب</li>
+                            <li>حدد نوع الصورة (واقعية، كرتونية، فنية)</li>
+                            <li>اذكر الإضاءة والمزاج المطلوب</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">إحصائيات</h3>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalImages">0</span>
+                                <span class="stat-label">صورة مولدة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="todayImages">0</span>
+                                <span class="stat-label">اليوم</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2025 مولد الصور بالذكاء الاصطناعي - مشروع تعليمي
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

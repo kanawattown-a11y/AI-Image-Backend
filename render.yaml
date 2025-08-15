@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-image-generator-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/main.py
+    envVars:
+      - key: HUGGING_FACE_TOKEN
+        sync: false
+    plan: free
+
