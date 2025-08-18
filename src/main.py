@@ -25,6 +25,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 with app.app_context():
     db.create_all()
+@app.errorhandler(405)
+def handle_405(e):
+    print("!!! 405 for:", request.method, request.path)
+    return "Method Not Allowed", 405
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
