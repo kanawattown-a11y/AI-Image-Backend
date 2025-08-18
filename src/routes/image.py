@@ -9,7 +9,7 @@ print("✅ image routes loaded")
 
 # --- اضبط هنا موديل Hugging Face الذي تريده ---
 # مثال موثوق ومشهور:
-HF_API_URL = "https://api-inference.huggingface.co/models/hogiahien/counterfeit-v30-edited"
+HF_API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
 # أو بدل السطر أعلاه بأي موديل inference آخر متوفر، مثل:
 # HF_API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1"
 # --------------------------------------------------------------------
