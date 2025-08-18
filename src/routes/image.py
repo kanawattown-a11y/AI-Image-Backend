@@ -8,7 +8,7 @@ image_bp = Blueprint('image', __name__)
 print("✅ image routes loaded")
 
 # Hugging Face API configuration
-HF_API_URL = "https://api-inference.huggingface.co/models/stable-diffusion-v1-5/stable-diffusion-v1-5"
+HF_API_URL = "https://api-inference.huggingface.co/models/stable-diffusion-v1-5"
 HF_TOKEN = os.environ.get('HUGGING_FACE_TOKEN', '')
 
 @image_bp.route('/generate-image', methods=['POST'])
